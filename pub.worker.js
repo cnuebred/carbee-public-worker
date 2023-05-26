@@ -121,7 +121,3 @@ class CoreWorker extends Tree {
     })
   }
 }
-
-const CARBEE_WORKER = new CoreWorker().init()
-
-window.onload = () => {}
