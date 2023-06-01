@@ -90,6 +90,9 @@ class CoreWorker extends Tree {
       })
     })
   }
+  set_table(){
+    
+  }
   set_params() {
     const url_params = new URLSearchParams(window.location.search)
     const it = url_params.entries()
