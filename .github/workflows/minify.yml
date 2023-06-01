@@ -19,5 +19,5 @@ jobs:
               uses: stefanzweifel/git-auto-commit-action@v4
               with:
                 commit_message: "github action: auto minify - carbee-public"
-                branch: ${{github.ref}}
+                branch: minify
 # TODO branch protected
