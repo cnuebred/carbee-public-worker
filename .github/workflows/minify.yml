@@ -20,3 +20,4 @@ jobs:
               with:
                 commit_message: "github action: auto minify - carbee-public"
                 branch: ${{github.ref}}
+# TODO branch protected
