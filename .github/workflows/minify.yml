@@ -10,7 +10,9 @@ jobs:
             - name: Auto Minify
               uses: nizarmah/auto-minify@v2.1.1
               with: 
-                directory: "js_minify"
+                directory: "./pub.worker.js"
+                output: "./pub/min"
+                js_engine: uglify-js
         
             - name: Auto committing minified files
               uses: stefanzweifel/git-auto-commit-action@v4
