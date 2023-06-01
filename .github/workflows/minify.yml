@@ -1,13 +1,19 @@
-step: 
-    - uses: actions/checkout@v2
+on:
+    push:
+
+jobs:
+    minify:
+        runs-on: ubuntu-latest
+        steps: 
+            - uses: actions/checkout@v2
     
-    - name: Auto Minify
-      uses: nizarmah/auto-minify@v2.1.1
-      with: 
-        - directory: "js_minify"
+            - name: Auto Minify
+              uses: nizarmah/auto-minify@v2.1.1
+              with: 
+                directory: "js_minify"
         
-    - name: Auto committing minified files
-      uses: stefanzweifel/git-auto-commit-action@v4
-      with:
-        - commit_message: "github action: auto minify - carbee-public"
-        - branch: ${{github.ref}}
+            - name: Auto committing minified files
+              uses: stefanzweifel/git-auto-commit-action@v4
+              with:
+                commit_message: "github action: auto minify - carbee-public"
+                branch: ${{github.ref}}
