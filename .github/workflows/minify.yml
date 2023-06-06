@@ -20,7 +20,7 @@ jobs:
               with:
                 push_options: '--force'
                 file_pattern: '*.js'
-                status_options: '--untracked-files=no'
+                disable_globbing: true
                 commit_message: "github action: tsc - carbee-public"
                 branch: minify
     minify:
