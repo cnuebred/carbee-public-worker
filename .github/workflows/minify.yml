@@ -19,7 +19,8 @@ jobs:
               uses: stefanzweifel/git-auto-commit-action@v4
               with:
                 push_options: '--force'
-                #file_pattern: '*.js'
+                file_pattern: '*.js'
+                status_options: '--untracked-files=no'
                 commit_message: "github action: tsc - carbee-public"
                 branch: minify
     minify:
