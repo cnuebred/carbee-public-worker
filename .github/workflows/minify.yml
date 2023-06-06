@@ -18,8 +18,8 @@ jobs:
             - name: Auto committing js files
               uses: stefanzweifel/git-auto-commit-action@v4
               with:
-                file_pattern: "*.js"
                 push_options: '--force'
+                file_pattern: '*.js'
                 commit_message: "github action: tsc - carbee-public"
                 branch: minify
     minify:
