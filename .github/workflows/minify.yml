@@ -1,7 +1,19 @@
 on:
     push:
-
+    
 jobs:
+    tsc:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@master
+            - uses: actions/checkout@v2
+            - uses: actions/setup-node@v2
+              with:
+                    node-version: 14
+            - name: install tsc
+              run: npm i typescript -D
+            - name: tsc
+              run: npx tsc ./pub.worker.ts
     minify:
         runs-on: ubuntu-latest
         steps: 
