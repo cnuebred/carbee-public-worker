@@ -15,9 +15,10 @@ jobs:
             - name: tsc
               run: npx tsc ./pub.worker.ts
               
-            - name: Auto committing minified files
+            - name: Auto committing js files
               uses: stefanzweifel/git-auto-commit-action@v4
               with:
+                file_pattern: .js
                 push_options: '--force'
                 commit_message: "github action: tsc - carbee-public"
                 branch: minify
